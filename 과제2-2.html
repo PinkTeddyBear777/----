@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+
+
+<html>
+    <head>
+        <title>구조요소</title>
+        <style>
+            body{
+                padding: 0;
+                margin: 0;
+            }
+            ul{
+                margin: 0;
+                padding: 0;
+                list-style-type: none;
+            }
+            li{
+                display: inline;
+                margin-right: 20px;
+            }
+            #warp{
+                position:relative;
+                top:0px;
+                left: 0px;
+                min-width: 1080px;
+            }
+            #header{
+                position:relative;
+                height: 100px;
+                margin-left: 10px;
+                margin-top: 5px;
+                margin-bottom: 5px;
+                border-style: solid;
+            }
+            #main{
+                position:relative;
+                
+                height: 100px;
+                margin-left: 10px;
+                margin-top: 5px;
+                margin-bottom: 5px;
+                border-style: solid;
+            }
+            #footer{
+                position:relative;
+                
+                margin-left: 10px;
+                border-style: solid;
+            }
+            #h1{
+                position:absolute;
+                top:0px;
+                left:0px;
+                margin-right: 30px;
+                background-color:blue ;
+             
+            }
+            #nav{
+                position:absolute;
+                top:30px;
+                left: 150px;
+                background-color:blue ;
+            }
+            #section{
+                float:left;
+                background-color:blue ;
+                width: 100px;
+                height: 100px;
+                margin-right: 10px;
+            }
+            #inner_section{
+                float: left;
+                position:relative;
+                width: 100px;
+                height: 100px;
+            }
+            #article{
+                position:absolute;
+                top:0px;
+                left: 0px;
+                width:100px;
+                height: 55px;
+                margin-bottom: 5px;
+                background-color: blue;
+            }
+            #aside{
+                position:absolute;
+                top:60px;
+                left:0px;
+                width:100px;
+                height: 40px;
+                background-color: blue;
+            }
+            #address{
+                position:relative;
+                top: 1px;
+                left:20px;
+                background-color: blue;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrap">
+            <header id="header">
+                <div id="h1">
+                    <h1>반응형 웹</h1>
+                </div>
+                <div id="nav">
+                    <ul>
+                        <li>MENU1</li>
+                        <li>MENU2</li>
+                        <li>MENU3</li>
+                        <li>MENU4</li>
+                    </ul>
+                </div>
+            </header>
+
+            <main id="main">
+                <div id="section">
+                    <p>section1</p>
+                </div>
+                <div id="section">
+                    <p>section2</p>
+                </div>
+                <div id="inner_section">
+                    <article id="article">
+                        <p>주요 기사</p>
+                    </article>
+                    <aside id="aside">
+                        <p>광고</p>
+                    </aside>
+                </div>
+            </main>
+            <footer id="footer">
+                <address id="address">경남 밀양시</address>
+                <p id="address">부산대학교</p>
+            </footer>
+        </div>
+    </body>
+
+
+</html>

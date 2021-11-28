@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>기말과제</title>
+        <meta name="viewport" content="user-scalable=no,initial-scale=1,minimum-scale=1,
+        maximum-scale=1">
+        <style>
+            body{
+                margin:0;
+                padding:0;
+            }
+            #warp{
+                margin:0;
+                padding:0;
+            }
+            h1{
+                background-color: white;
+                margin: 0 auto;
+                padding-top: 15px;
+                padding-bottom:15px;
+                width:100%;
+                text-align: center;
+                z-index: 5;
+            }
+           
+            #section_1{
+                position: relative;
+                width:100%;
+                overflow: hidden;
+                margin:0 auto;
+            }
+            #section_2{
+                position: relative;
+                width: 100%;
+                overflow: hidden;
+                margin:0 auto;
+            }
+            footer{
+                position:relative;
+                width:100%;
+                overflow: hidden;
+                margin:0 auto;
+            }
+            @media (min-width:960px) {
+                header{
+                    position:relative;
+                    width:100%;
+                    background-image: url('mainslide_01.jpg');
+                    background-size: 100%;
+                    height: 1000px;
+                    background-attachment: scroll;
+                    overflow: hidden;
+                }
+                #headerMenu{
+                    position:fixed;
+                    width:100%;
+                    overflow: hidden;
+                    z-index: 10;
+                    background-color: dimgrey;
+                }
+                #home{
+                    width:50%;
+                    float:left;
+                    height: 100%;
+                }
+                #menu{
+                    width:50%;
+                    float:left;
+                    overflow: hidden;
+                }
+                #sign{
+                    position:relative;
+                    width: 100%;
+                    margin-right: 5%;
+                    overflow: hidden;
+                    display: block;
+                }
+                #sign ul{
+                    list-style: none;
+                    overflow: hidden;
+                    padding-inline-start: 0;
+                    padding-inline-end: 40px;
+                    margin-block-end: 0;
+                }
+                #sign ul li{
+                    display: inline;
+                    float:right;
+                    padding-left:20px;
+                    padding-right: 20px;
+                }
+                #homeMenu{
+                    position:relative;
+                    width: 100%;
+                    margin: 0 auto;
+                    overflow: hidden;
+                    font-size: large;
+                }
+                #homeMenu ul{
+                    list-style: none;
+                    overflow: hidden;
+                    padding-inline-start: 0;
+                    padding-inline-end: 20px;
+                }
+                #homeMenu ul li{
+                    display: inline;
+                    padding-left:30px;
+                    padding-right: 20px;
+                    float:right;
+                    margin: 0 auto;
+                }
+                #tour{
+                    width: 90%;
+                    overflow: hidden;
+                    margin:0 auto;
+                    padding-left:10%;
+                    padding-right: 15%;
+                    padding-bottom: 3%;
+                }
+                #container{
+                    text-align: center;
+                    float:left;
+                    padding:25px;
+                    background-color: bisque;
+                }
+                #consult{
+                    margin:0 auto;
+                    margin-left: 10%;
+                    overflow: hidden;
+                    width:40%;
+                    background-color:blanchedalmond;
+                    padding:3%;
+                    float:left;
+                }
+                #consult_kakao{
+                    margin:0 auto;
+                    float:left;
+                    width: 45%;
+                    overflow: hidden;
+                    background-color: white;
+                    padding-right: 10px;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                }
+                #consult_calling{
+                    margin:0 auto;
+                    float:left;
+                    width: 45%;
+                    padding-left: 2%;
+                    overflow: hidden;
+                    background-color: white;
+                    padding-bottom: 10px;
+                    padding-top: 10px;
+                }
+                #consult_img{
+                    float:left;
+                    padding-left: 20px;
+                }
+                #consult_p{
+                    float:left;
+                    padding-left: 20px;
+                }
+                #notice{
+                    margin: 0 auto;
+                    float:left;
+                    padding-left: 3%;
+                }
+                #footerMenu{
+                    width:100%;
+                    margin: 0 auto;
+                    overflow: hidden;
+                }
+                #footerMenu ul{
+                    list-style: none;
+                    overflow: hidden;
+                }
+                #footerMenu ul li{
+                    display:inline;
+
+                }
+                #info{
+                    width:100%;
+                    margin:0 auto;
+                    overflow: hidden;
+                }
+                #work_Info{
+                    width:65%;
+                    float:left;
+                    margin: 0 auto;
+                    padding-left: 40px;
+                }
+                #extra_Info{
+                    width:25%;
+                    float:left;
+                    overflow: hidden;
+                    margin: 0 auto;
+                }
+                #extra_Img{
+                    width:30%;
+                    float:left;
+
+                }
+                #quickMenu{
+                    position: fixed;
+                    top:250px;
+                    right:0;
+                    width: 160px;
+                    z-index: 100;
+                    
+                }
+                #quickMenu ul{
+                    list-style: none;
+                    width: 150px;
+                    background-color: rgba(11, 8, 53, 0.911);
+                    padding-inline-start: 0;
+                }
+                #quickMenu ul li{
+                    text-align: center;
+                    font-size: 12px;
+                    color:white;
+                    text-align: center;
+                }
+
+                
+            }
+            @media (max-width:959px)and (min-width:768px) {
+                header{
+                    position:relative;
+                    width:100%;
+                    background-image: url('mainslide_01.jpg');
+                    background-size: 100%;
+                    height: 700px;
+                    background-attachment: scroll;
+                    overflow: hidden;
+                }
+                #headerMenu{
+                    position:fixed;
+                    width:100%;
+                    overflow: hidden;
+                    z-index: 10;
+                    background-color: dimgrey;
+                }
+                #home{
+                    width:50%;
+                    float:left;
+                    height: 100%;
+                }
+                #menu{
+                    width:50%;
+                    float:left;
+                    overflow: hidden;
+                }
+                #sign{
+                    position:relative;
+                    width: 100%;
+                    margin-right: 5%;
+                    overflow: hidden;
+                    display: block;
+                }
+                #sign ul{
+                    list-style: none;
+                    overflow: hidden;
+                    padding-inline-start: 0;
+                    padding-inline-end: 40px;
+                    margin-block-end: 0;
+                }
+                #sign ul li{
+                    display: inline;
+                    float:right;
+                    padding-left:20px;
+                    padding-right: 20px;
+                }
+                #homeMenu{
+                    position:relative;
+                    width: 100%;
+                    margin: 0 auto;
+                    overflow: hidden;
+                    font-size: large;
+                }
+                #homeMenu ul{
+                    list-style: none;
+                    overflow: hidden;
+                    padding-inline-start: 0;
+                    padding-inline-end: 20px;
+                }
+                #homeMenu ul li{
+                    display: inline;
+                    padding-left:20px;
+                    padding-right: 10px;
+                    float:right;
+                    margin: 0 auto;
+                }
+                #tour{
+                    width: 100%;
+                    overflow: hidden;
+                    margin:0 auto;
+                    padding-left:10%;
+                    padding-right: 10%;
+                    padding-bottom: 3%;
+                }
+                #container{
+                    text-align: center;
+                    float:left;
+                    padding:10px;
+                    background-color: bisque;
+                }
+                #consult{
+                    margin:0 auto;
+                    margin-left: 10%;
+                    overflow: hidden;
+                    width:40%;
+                    background-color:blanchedalmond;
+                    padding:3%;
+                    float:left;
+                }
+                #consult_kakao{
+                    margin:0 auto;
+                    float:left;
+                    width: 45%;
+                    overflow: hidden;
+                    background-color: white;
+                    padding-right: 10px;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                }
+                #consult_calling{
+                    margin:0 auto;
+                    float:left;
+                    width: 45%;
+                    padding-left: 2%;
+                    overflow: hidden;
+                    background-color: white;
+                    padding-bottom: 10px;
+                    padding-top: 10px;
+                }
+                #consult_img{
+                    float:left;
+                    padding-left: 20px;
+                }
+                #consult_p{
+                    float:left;
+                    padding-left: 20px;
+                }
+                #notice{
+                    margin: 0 auto;
+                    float:left;
+                    padding-left: 3%;
+                }
+                #footerMenu{
+                    width:100%;
+                    margin: 0 auto;
+                    overflow: hidden;
+                }
+                #footerMenu ul{
+                    list-style: none;
+                    overflow: hidden;
+                }
+                #footerMenu ul li{
+                    display:inline;
+
+                }
+                #info{
+                    width:100%;
+                    margin:0 auto;
+                    overflow: hidden;
+                }
+                #work_Info{
+                    width:65%;
+                    float:left;
+                    margin: 0 auto;
+                    padding-left: 40px;
+                }
+                #extra_Info{
+                    width:25%;
+                    float:left;
+                    overflow: hidden;
+                    margin: 0 auto;
+                }
+                #extra_Img{
+                    width:30%;
+                    float:left;
+
+                }
+                #quickMenu{
+                    position: fixed;
+                    top:250px;
+                    right:0;
+                    width: 160px;
+                    z-index: 100;
+                    display: none;
+                }
+                #quickMenu ul{
+                    list-style: none;
+                    width: 150px;
+                    background-color: rgba(11, 8, 53, 0.911);
+                    padding-inline-start: 0;
+                }
+                #quickMenu ul li{
+                    text-align: center;
+                    font-size: 12px;
+                    color:white;
+                    text-align: center;
+                }
+            }
+            @media (max-width:767px) {
+                header{
+                    position:relative;
+                    width:100%;
+                    background-image: url('mainslide_01.jpg');
+                    background-size: 100%;
+                    height: 380px;
+                    background-attachment: scroll;
+                    overflow: hidden;
+                }
+                #headerMenu{
+                    position:fixed;
+                    width:100%;
+                    overflow: hidden;
+                    z-index: 10;
+                    background-color: dimgrey;
+                }
+                #home{
+                    width:100%;
+                    
+                    height: 100%;
+                }
+                #menu{
+                    display: none;
+                    width:50%;
+                    float:left;
+                    overflow: hidden;
+                }
+                #sign{
+                    position:relative;
+                    width: 100%;
+                    margin-right: 5%;
+                    overflow: hidden;
+                    display: block;
+                }
+                #sign ul{
+                    list-style: none;
+                    overflow: hidden;
+                    padding-inline-start: 0;
+                    padding-inline-end: 40px;
+                    margin-block-end: 0;
+                }
+                #sign ul li{
+                    display: inline;
+                    float:right;
+                    padding-left:20px;
+                    padding-right: 20px;
+                }
+                #homeMenu{
+                    position:relative;
+                    width: 100%;
+                    margin: 0 auto;
+                    overflow: hidden;
+                    font-size: large;
+                }
+                #homeMenu ul{
+                    list-style: none;
+                    overflow: hidden;
+                    padding-inline-start: 0;
+                    padding-inline-end: 20px;
+                }
+                #homeMenu ul li{
+                    display: inline;
+                    padding-left:20px;
+                    padding-right: 10px;
+                    float:right;
+                    margin: 0 auto;
+                }
+                #tour{
+                    width: 100%;
+                    overflow: hidden;
+                    margin:0 auto;
+                    padding-left:10%;
+                    padding-right: 10%;
+                    padding-bottom: 3%;
+                }
+                #container{
+                    text-align: center;
+                    float:left;
+                    padding:10px;
+                    background-color: bisque;
+                }
+                #consult{
+                    display: none;
+                    margin:0 auto;
+                    margin-left: 10%;
+                    overflow: hidden;
+                    width:40%;
+                    background-color:blanchedalmond;
+                    padding:3%;
+                    float:left;
+                }
+                #consult_kakao{
+                    margin:0 auto;
+                    float:left;
+                    width: 45%;
+                    overflow: hidden;
+                    background-color: white;
+                    padding-right: 10px;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                }
+                #consult_calling{
+                    margin:0 auto;
+                    float:left;
+                    width: 45%;
+                    padding-left: 2%;
+                    overflow: hidden;
+                    background-color: white;
+                    padding-bottom: 10px;
+                    padding-top: 10px;
+                }
+                #consult_img{
+                    float:left;
+                    padding-left: 20px;
+                }
+                #consult_p{
+                    float:left;
+                    padding-left: 20px;
+                }
+                #notice{
+                    margin: 0 auto;
+                    width: 100%;
+                    padding-left: 3%;
+                }
+                #footerMenu{
+                    width:100%;
+                    margin: 0 auto;
+                    overflow: hidden;
+                }
+                #footerMenu ul{
+                    list-style: none;
+                    overflow: hidden;
+                }
+                #footerMenu ul li{
+                    display:inline;
+
+                }
+                #info{
+                    width:100%;
+                    margin:0 auto;
+                    overflow: hidden;
+                }
+                #work_Info{
+                    width:100%;
+                    float:left;
+                    margin: 0 auto;
+                    padding-left: 40px;
+                }
+                #extra_Info{
+                    width:100%;
+                    float:left;
+                    overflow: hidden;
+                    padding-left: 20%;
+                }
+                #extra_Img{
+                    width:100px;
+                    padding-left:2%;
+                    float:left;
+                    margin:0 auto;
+                }
+                #quickMenu{
+                    position: fixed;
+                    top:250px;
+                    right:0;
+                    width: 160px;
+                    z-index: 100;
+                    display: none;
+                }
+                #quickMenu ul{
+                    list-style: none;
+                    width: 150px;
+                    background-color: rgba(11, 8, 53, 0.911);
+                    padding-inline-start: 0;
+                }
+                #quickMenu ul li{
+                    text-align: center;
+                    font-size: 12px;
+                    color:white;
+                    text-align: center;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div id="warp">
+            <header id="header">
+                <div id="headerMenu">
+                    <div id="home">
+                        <h1>TOURIST in TOUR</h1>
+                    </div>
+                    <div id="menu">
+                        <div id="sign">
+                            <ul>
+                                <li>회원가입</li>
+                                <li>로그인</li>
+                            </ul>
+                        </div>
+                        <div id="homeMenu">
+                            <ul>
+                                <li>티켓/가이드</li>
+                                <li>상품투어</li>
+                                <li>고객센터</li>
+                                <li>이용정보</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div id="section_1">
+                <h1>다시 찾는 인기 여행지
+                    <b><span border="3">TOP 3</span></b>
+                </h1>
+                <div id="tour">
+                    <div id="container">
+                        <img src="img_topplace01.jpg" alt="대성당">
+                        <br><p><span style="font-weight: bold;">성패트릭 대성당</span> </p>
+                        <p>바쁜 뉴욕 안에서 정교하면서도</p>
+                        <p>웅장한 기운에 침묵하게 되는 기도의 시간!</p>
+                        <br>
+                        <p><span style="text-decoration: overline">VIEW</span> </p>
+                    </div>
+                    <div id="container">
+                        <img src="img_topplace02.jpg" alt="원주 산">
+                        <br><p><span style="font-weight: bold;">원주 뮤지엄 '산'</span> </p>
+                        <p>전시된 유산들을 담아낸 건물에</p>
+                        <p>신비로운 돌과 물의 테마가 담겨있다.</p>
+                        <br>
+                        <p><span style="text-decoration: overline">VIEW</span> </p>
+                    </div>
+                    <div id="container">
+                        <img src="img_topplace03.jpg" alt="일본 공원">
+                        <br><p><span style="font-weight: bold;">일본 만국박람회 기념공원</span> </p>
+                        <p>오사카 센리 반파쿠에는 드넓은</p>
+                        <p>대지에 정원과 돌, 물과 함께 하는 문화가 있다.</p>
+                        <br>
+                        <p><span style="text-decoration: overline">VIEW</span> </p>
+                    </div>
+                </div>
+            </div>
+            <div id="section_2">
+                <div id="consult">
+                    <div id="consult_kakao">
+                        <div id="consult_img"><img src="ico_kakao.png" alt="카카오톡 이미지" width="50px" height="50px"></div>
+                        <div id="consult_p"><p>카카오톡 1:1 상담</p></div>
+                    </div>
+                    <div id="consult_calling">
+                        <div id="consult_img"><img src="ico_phone.png" alt="전화 이미지" width="50px" height="50px"></div>
+                        <div id="consult_p"><p>전화 상담 신청</p></div>
+                    </div>
+                </div>
+                <div id="notice">
+                    <p>NOTICE</p>
+                    <ul>
+                        <li>이번 여름 휴가 제주 갈까? 미션 투어</li>
+                        <li>박물관 미션 투어 응모 당첨자 발표</li>
+                        <li>추석 연휴 티켓/투어 배송 및 직접 수령</li>
+                        <li>하롬베이 서비스 OPEN!</li>
+                        <li>투어리스트인투어 서비스 점검 안내</li>
+                    </ul>
+                </div>
+            </div>
+            <nav>
+                <div id="quickMenu">
+                    <ul>
+                        <li>
+                            "전화문의"
+                            <p>010-1234-5678</p>
+                        </li>
+                        <li>
+                            "카카오톡"
+                            <p>1:1상담</p>
+                        </li>
+                        <li>오시는길</li>
+                        <li>TOP</li>
+                    </ul>
+                </div>
+            </nav>
+            <footer>
+                <div id="footerMenu">
+                    <hr>
+                    <ul>
+                        <li>이용약관</li>
+                        <li>개인정보취급방침</li>
+                    </ul>
+                </div>
+                <div id="info">
+                    <div id="work_Info">
+                        <p>투어리스트인투어</p>
+                        <p>서울특별시 종로구 해화동 9길 청문빌딩 5층/대표전화 02-1234-5678/Email : tourlistintour.com</p>
+                        <p>Copyright(c) TouristInTour all right reserved</p>
+                    </div>
+                    <div id="extra_Info">
+                        <div id="extra_Img">
+                            <img src="ico_blog_r.png" alt="블로그 사진" width="50" height="70">
+                        </div>
+                        <div id="extra_Img">
+                            <img src="ico_face.png" alt="페이스북 사진" width="50" height="50">
+                        </div>
+                        <div id="extra_Img">
+                            <img src="ico_instargram_r.png" alt="인스타그램 사진" width="50" height="70">
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>
