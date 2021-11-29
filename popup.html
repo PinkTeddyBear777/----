@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <title>팝업창</title>
+    </head>
+    <body>
+        <h1 id='pop'>hello world!</h1>
+        <script language = "javascript">
+            temp = location.href.split("?");
+            content=temp[1];
+            var element=document.getElementById('pop')
+            element.innerHTML=content;
+        </script>
+        
+    </body>
+</html>

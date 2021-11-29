@@ -282,7 +282,7 @@
                     padding-inline-start: 0;
                     padding-inline-end: 20px;
                 }
-                #homeMenu ul li{
+                .list{
                     display: inline;
                     padding-left:20px;
                     padding-right: 10px;
@@ -601,10 +601,10 @@
                         </div>
                         <div id="homeMenu">
                             <ul>
-                                <li>티켓/가이드</li>
-                                <li>상품투어</li>
-                                <li>고객센터</li>
-                                <li>이용정보</li>
+                                <li class="list"><input type="button" value="티켓/가이드" style="background-color: dimgrey; color:black; font-size: large; border:0;" onclick="showPopup('ticket');"/></li>
+                                <li class="list"><input type="button" value="상품투어" style="background-color: dimgrey; color:black; font-size: large; border:0;" onclick="showPopup('tour');"/></li>
+                                <li class="list">고객센터</li>
+                                <li class="list"><input type="button" value="이용정보" style="background-color: dimgrey; color:black; font-size: large; border:0;" onclick="showPopup('using_information');"/></li>
                             </ul>
                         </div>
                     </div>
@@ -707,5 +707,7 @@
                 </div>
             </footer>
         </div>
+
+        <script type="text/javascript" src="PopUp.js"></script>
     </body>
 </html>
