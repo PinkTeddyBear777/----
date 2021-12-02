@@ -4,12 +4,12 @@
     </head>
     <body>
         <h1 id='pop'>hello world!</h1>
+        <input type="button" value="창 닫기" onclick="window.history.back();"/>
         <script language = "javascript">
             temp = location.href.split("?");
             content=temp[1];
             var element=document.getElementById('pop')
             element.innerHTML=content;
         </script>
-        
     </body>
 </html>

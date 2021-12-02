@@ -1,0 +1,126 @@
+<html>
+    <head>
+        <title>회원가입</title>
+        <style>
+            .wrap{
+                margin: 0;
+                padding: 0;
+            }
+            #member{
+                margin: 0 auto;
+                padding: 0;
+                overflow: hidden;
+                text-align: center;
+            }
+            #member table{
+                margin: 0 auto;
+                padding: 0;
+                /*border: 1px solid #444444;*/
+                border-collapse: collapse;
+            }
+            tr,td{
+                border-bottom:1px solid #444444;
+                padding:10px;
+            }
+            span{
+                color:red;
+            }
+        </style>
+        
+    </head>
+    <body>
+        <div class="wrap">
+            <div id="member">
+                <form>
+                    <table>
+                        <tr>
+                            <td style="border-right: 0;"><h3 style="color: red;">*필수입력</h3></td>
+                            <td style="border-left: 0;"></td>
+                        </tr>
+                        <hr>
+                        <tr>
+                            <td><label for="Email_id"><span>*</span>이메일</label></td>
+                            <td><input id="Email_id" type="text" name="Email_id">
+                            @ <input type="text" name="Email_domain" id="Email_domain"></td>
+                            <td>
+                                <select name="Domain" id="Domain">
+                                    <option value="persnal">직접입력</option>
+                                    <option value="naver">naver.com</option>
+                                    <option value="google">gmail.com</option>
+                                    <option value="daum">daum.net</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="pw"><span>*</span>비밀번호</label></td>
+                            <td><input type="text" id="pw" name="pw" size="30" placeholder="비밀번호를 입력해주세요"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="checking_pw"><span>*</span>비밀번호 확인</label></td>
+                            <td><input type="text" id="checking_pw" name="checking_pw" size="30" placeholder="비밀번호를 다시 한번 입력해주세요"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="Name"><span>*</span>이름</label></td>
+                            <td><input type="text"id="Name" name="Name" placeholder="이름을 입력하세요"></td>
+                        </tr>
+                        <tr>
+                            <td><span>*</span>전화번호</td>
+                            <td>
+                                <input type="text" id="phone" name="phone"placeholder="-없이 숫자만 입력하세요">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="gender">&nbsp;성별</label></td>
+                            <td>
+                                남<input type="radio" name="gender" checked="checked">
+                                여<input type="radio" name="gender">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;생일</td>
+                            <td>
+                                <input type="text" name="year" id="year" size="4" maxlength="4">년
+                                <select name="month" size="1">
+                                    <option value="january">1월</option>
+                                    <option value="february">2월</option>
+                                    <option value="march">3월</option>
+                                    <option value="april">4월</option>
+                                    <option value="may">5월</option>
+                                    <option value="june">6월</option>
+                                    <option value="july">7월</option>
+                                    <option value="august">8월</option>
+                                    <option value="september">9월</option>
+                                    <option value="october">10월</option>
+                                    <option value="november">11월</option>
+                                    <option value="december">12월</option>
+                                </select>
+                                <input type="text" name="day" id="day" size="2" maxlength="2">일
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;주소</td>
+                            <td>
+                                <input type="text" name="address" id="address">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>개인정보 활용동의</td>
+                            <td>
+                                <input type="checkbox" id="accept_using_info" name="accept_using_info"> 동의함
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;문의내용</td>
+                            <td>
+                                <textarea style="width: 350px;" placeholder="상담 요청 사항을 남겨주시면 더욱 자세한 상담을 받으실 수 있습니다."></textarea>
+                            </td>
+                        </tr>
+                    </table>
+                    <br>
+                    <input type="submit" value="확인" id="Sign" name="Sign">
+                </form>
+            </div>
+            
+        </div>
+    </body>
+</html>
